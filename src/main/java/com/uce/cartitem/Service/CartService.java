@@ -45,7 +45,7 @@ public class CartService implements CartServiceImp {
         return cartItemDto;
     }
 
-    private boolean isUserEnabled(String userId) {
+    private boolean isUserEnabled(Long userId) {
         UserDto user = restTemplate.getForObject(userServiceUrl + "/" + userId, UserDto.class);
         return user != null && user.isEnabled();
     }

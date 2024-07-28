@@ -8,5 +8,5 @@ import com.uce.cartitem.Model.CartItem;
 
 @Repository
 public interface CartRepository extends JpaRepository<CartItem, Long>{
-    Optional<CartItem> findByProductIdAndUserId(Long productId, String userId);
+    Optional<CartItem> findByProductIdAndUserId(Long productId, Long userId);
 }
